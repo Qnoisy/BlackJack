@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------- */
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 73.125rem;
+  padding: 1rem;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.block {
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 3fr 1fr;
+}
+
+.cards__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 5px solid rgb(224, 224, 224);
+  border-radius: 1rem;
+  background-color: rgb(240, 240, 240);
+}
+
+.card {
+  width: 130px;
+  height: 200px;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 5px solid brown;
+  color: brown;
+}
+.card span {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.card__black {
+  border: 5px solid rgb(31, 31, 31);
+  color: rgb(31, 31, 31);
+}
+
+.card__red {
+  border: 5px solid brown;
+  color: brown;
+}
+
+.card__back {
+  background: url("../img/playing-card-seamless-pattern-background_713451-138.avif") 0 0 no-repeat;
+}
+
+.scale-in-hor-center {
+  -webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+#take {
+  grid-area: take;
+}
+
+#hold {
+  grid-area: hold;
+}
+
+#dealerpoints {
+  grid-area: dealer;
+}
+
+#playerpoints {
+  grid-area: player;
+}
+
+#whoWin {
+  grid-area: win;
+}
+
+.btn__row {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "take hold dealer player win";
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  border: 5px solid rgb(224, 224, 224);
+  border-radius: 1rem;
+  background-color: rgb(240, 240, 240);
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn {
+  background: #b621fe;
+  border: none;
+  z-index: 1;
+}
+
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.btn:active {
+  top: 2px;
+}
+
+@media screen and (max-width: 48em) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+  .card {
+    border: 3px solid brown;
+    width: 100px;
+    height: 150px;
+    border-radius: 1rem;
+  }
+  .card span {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
+  .cards__ul {
+    border: 3px solid rgb(224, 224, 224);
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .card__black {
+    border: 3px solid rgb(31, 31, 31);
+  }
+  .card__red {
+    border: 3px solid brown;
+  }
+  .btn__row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "take hold ." "dealer player win";
+  }
+}
+@media screen and (max-width: 32em) {
+  .container {
+    padding: 0.5rem;
+  }
+  .card {
+    width: 70px;
+    height: 100px;
+  }
+  .card span {
+    padding: 0.4rem;
+    font-size: 1.2rem;
+  }
+  .btn__row {
+    font-size: 1.3rem;
+    grid-template-areas: "take" "hold" "dealer" "player" "win";
+  }
+}
